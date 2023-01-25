@@ -1,0 +1,23 @@
+<html>
+    <script>
+    function randomNumber(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    let randomNumbers = [];
+    for (let i = 0; i < 5; i++) {
+        let random = randomNumber(1, 43);
+        while (randomNumbers.includes(random)) {
+            random = randomNumber(1, 43);
+        }
+        randomNumbers.push(random);
+    }
+
+    let extraNumber = randomNumber(1,16);
+    randomNumbers.push(extraNumber);
+    document.write(randomNumbers);
+
+   
+
+    </script>
+</html>
